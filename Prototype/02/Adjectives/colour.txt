@@ -1,0 +1,24 @@
+white
+red
+green
+grey
+blue
+yellow
+orange
+purple
+pink
+violet
+black
+dark
+brown
+blonde
+blond
+whitish
+blueish
+pinkish
+brownish
+reddish
+tan
+bright
+colorful
+navy blue
