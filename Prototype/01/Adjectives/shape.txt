@@ -20,7 +20,7 @@ slim
 skinny
 heavy
 overweight
-fat*
+fat
 curly
 wavy
 straight
