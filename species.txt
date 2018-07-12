@@ -41,7 +41,6 @@ slime-monster
 human
 hyena
 imp
-jake-paul-fan
 kitsune
 kitten
 kobold
@@ -77,7 +76,7 @@ sorcerer
 toad
 Tyrannosaurus rex
 troll
-Troodon
+troodon
 turtle
 unicorn
 vampire
