@@ -70,7 +70,6 @@ raptor
 reptile
 rogue
 salamander
-salamanders
 skeleton
 sloth
 snake
