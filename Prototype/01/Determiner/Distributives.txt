@@ -1,0 +1,7 @@
+all
+both
+half
+either
+neither
+each
+every
