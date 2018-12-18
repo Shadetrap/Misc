@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <style>
-	*{margin:0; background:black;color:white;}
+
 	body{
 		margin:0 auto;
 		padding:0px;
@@ -18,228 +18,140 @@
 		margin:10;
 		border:1px solid black;
 	}
+	table{
+		margin:0 auto;
+	}
+	tr, td, table{
+		border: 1px solid white;
+		border-collapse: collapse;
+	}
+	#log{
+		background-color:#222222;
+	}
+	.poop{background-color:green; color:yellow;}
 </style>
 
 <body>
-	<div class="translater"></div>
+	<div class="jsHelper"></div>
 	<div class="content">
-		<h1>Basic</h1>
+		<h1>BeepPlayer</h1>
+		<div id="log"></div>
+		<br>
+		<table id="mytable">
+				<tbody>
+
+				<!-- add more rows -->
+				</tbody>
+				</table>
+				<br>
 		<button onmousedown=synth.play()>Play</button><br>
 		<button onmousedown=synth.pause()>Pause</button><br>
 		<button onmousedown=synth.snapToStart()>Restart</button><br>
-		<button onmousedown="synth.snapToStart(); synth.setSong('6n31sbk4l00e0Ut8m0a2g0Uj_i3r1o4130T0w1f1d0c0h0v0T0w1f1d0c0h0v0T0w1f1d0c0h6v0T0w1f1d0c0h6v0T0w1f1d0c0h0v0T0w1f1d1c0h0v0T0w1f1d1c0h0v0T0w1f1d1c0h0v0T0w1f1d0c0h0v0T0w1f1d0c0h0v0T0w1f1d1c0h0v0T0w1f1d1c0h0v0T2w1d1v4T2w1d1v0T2w1d1v0T2w1d1v0b0wwoga63y18Emc6zxV0yi9B2FoKocCzpMWufE4a92yhF4GpeEkGBqNqKnI6b9CQqJw044330ggga111MM4443218Eib63hMYwf83OpgGmbByVAQre7zVU-yh8QylcBj9R2Bk00wwo42220g88e10wwwog952NwQsf84i14Elb5P1AQrb7jNZ0xh8QylcDkaliJoJnbM04210wg84210wg84210wg84210wg84210wg84210wg84210wg84210wg84210wg8440p2khagmyi3w2os0E4o0iqew4UA2j1k2E482E1xh9Evya8fwh2w7s0Xw7k0E0kN_Nc442E5Ubg70c21ayw17ew4Pg4zra80Ef60k0Yo1UM3Nw1Y8Af40kR0w063w8e2x1goyCCRSl0Xw1E1Sw2w7q0a0t80fq72weK1g381N03M1yE8cloaM7081d004uhwtM3G0k0Xw7s0bcc947nwWw7k0Ww503RZd886gF11O5fc58q4xMef5u8SyC0l0zUpEL9igSh621g211g221g0U10o09chI2kP4Ij3l25cYf93k4XCo6GIXCi6EbU0pxhb8a9i2zw3y9UykwoU1Uyu8DC3UNpPEHh641g2wl8a06wno5JI0si592I1o0X6o205u8Mwa0k2F1g0Q2F1g2whBgmwF1g38xafqKKwbaxj8j0Ca9tsY58awmM5wcGKVwagl0_87x4-4jUhM1N4Yhfz70f4jN4YNv6bet5qaMwa0k2J1g2Q0j18gow2g182JEF4lE805jf0M0kyaT2K5s2U5UyXe5saM8a0k2C0442MwHMk0E5qgpK00w0nww0ki0kpN800000FChmcQF64MPANccQQRCoEA6raQOe0sGG2dloPiCbagAao841f4Y2YgFyygu68Coe2Ef0v4oBAoDA7h80pCdcgx3g4UFAxE2sH93g4Vmi6w9Nf93g4UgP3sr2pG9CDIB1JxeRJ0SwDrT0spgtzCKUVw1U4wajufM90sDHMMt1NzOwR1enB1GEenB1G2sL9kwg8O0DvV71z4v0w3yv41epEUq0D4YAd0jwtYAp64APrtuhOEM00000000002dcNop7938U4p7hkhQ38V0p7j1544E1g14a091g18e09xM0Oge5Msg2w740E0u0aqggkxi23JFVwF38F3wsmbHN7b5byE4qh9zEO6i8M8a0k0E1g2w1Mm0M0Akz6x8i0Qk5cV1cigQ1f4sg6ywYjN8q0ADI1agGk1B1E2kMxgk0E5b0E0q1ojg4107F4CrY9860w2eCC0w2eC0w80ZIMa0k2C8503gaA50a14yw0aguayowK672ynFgwsa93xgMsa8hEwm14608xg18a06w50904w2g1808kxBYE4A2U5g26A5MbwlwK0v5M0MMq0CAdd50jU50a0k2w0k0d0Fw1g2wh7SgwXw7s0Ww13g2g180A0i027xk740Uw740E0gZFZNIwxwig2C5Ua0k2Bggg3ga51g2wh9FCd96Cgg4000000000ywq2j1E9w000000000000000000000000000000')">Newsong</button><br>
-		<!-- <button onmousedown="synth.snapToStart(); synth.setSong('6n32sbkbl01e0ztbm0a7g0Ajsi1r1o33200T0w2f1d1c2h0v0T0w1f1d0c0h0v0T0w3f1d1c0h0v0T0w1f1d1c0h0v0T0w4f4d1c0h0v0T0w1f1d1c0h0v0T2w1d1v1T2w1d1v0T2w1d1v1T2w1d1v0b2ZwxAagNb4yuxWLoaql9ARPo7gsal9AU8wL6gphOz0NPe28bR9mNilIcsPB9mM8xyqgF34agNPD28oCEixiSbksVMEixgh74h248gB4mco5FN4mJqTesVX61gx40000000000012400000000000gx00000p2uEleccz1j7wd0ragSAribmyb2C33TruNKlEuM5Ce6gpe0Aejy11pKiWyy362V2oojce05su47ktx883H4h8j6z8S8xSv60UYyGKhw5coo35o30ICCT70i4xy2oE0kMIj98YCCD9kU06tH3zkNNd381AkxieVAagcu9Mc7GoonYhhVhwe0Vm9oyfSIyzoIP09xx9CAocBd0A7Pnemxwc_1cz97GoU0ccw72okr4zPAxODDowfu07u100H0OMlTu80lBPtws0bKS05RBjodyqLoKGZyrHOMsnNunug3bKXUyGH1N5lBRBjodyqLoHpGBcvkgoMr8j32pxM0HzMww8X2gg7ma8849zrAqCy960Y8EyMVuTag5lczlye1RpelllkTGsogwegFxxhAi5n6O6vvy68ikz8JTc1PcwepA1pzYgVe0Aejy11pKiXA10Mc10TMc1NosSYaoxg76FzycMp0dokxl98cC7V85cs090e5cc2dygTQMEV-YdZV5Yqh1zdO4MMmos0aUY882eMA41Ry8Au4p6R8OgZj320kNN8EVyH0gFNSQwy1D14Dwwl0gaU8dx0Gsopc1R0q0Od8o8zbFywg43zWOgA5cop3g54024Mx4Oif9FFOle01IqMw02VzxRoWXItRSeAc8c3Mgp046g212R100E231j8lgojyblly0dRtSllozZVllytTBlm0Y39TullbFDbGayjQcG5wqoMZc66CCBR55aTLnjao7tTcB9pyQgg950Ac2gcN01Y07whU8uh7JS_V0wA22h894wAi1A22Tr_whY07M0u17wxV4uTr_A22g80IPli1u07o100H0OMlTu80lBPtws0bKS05RBjodyqLoKGZyrHOMsnNunug3bKXUyGH1N5lBRBjodyqLoHpGDOdtchj0GIHaGOI5Nj0GIHaGODaNnaGOIGHaPsjPaIHaGODdOYSHaOGI0M3cPGIHaGOD1sjPGIHaGOkgglc465c4CshkMht6-bHww0lwpoaXLfaIKrI7ztTVnmndwSGGZyWHS9KLb1Nv5VtV0cKXLyaGI74lmnmldwS9GZyJCGncrv4GGwRlgpiXFCMQxHC5sNY2M56xwFAaEc9N5GGN06WKXaGIh-YGGNeXwu1AXLaGwG5ON8ZCF9ES5Xh0kAhTcQ5d4fsOLBljCp0yOWpOXdl9m6KCsGxEZP-ZURleoF6286GGSGEy0002Ca2Cp52oQp5wWNJ0p8dwoaLkcFj9O_gZ0N7aHN8c2C8A5RyQjaOkPpR7tKE3BcA613CS5YBKwMM0r0VChoOoogdRwr0Ori71cK-jEOqcBAgVen1kQpB6iV6hAko3BRVu8oAdjhoQbyXd_Ke9EjeBUhSurLStyOzpv3WJ3X0N7aHPv07f600000ao00Aw0gQ92g783hIyOgQ9OVqkCiD9CVaaC92w226FyygFywWw5fc92hB0SuoVHpS7ywVdlek79GFsHGtzCKpVzGcE6PP7zTu6jUXSjPR0uuJFOwVfftNAYXSjPP7zTkue-4YNUNBsu1cl2hj1Wgi6-huv3U1YTnO01FQwx8Eaog6F2EsEZQ6z8shh030A92g4wUHywsghSJA6lAwkwi8tHp1N7cwUHywsgQxhdUf6sm3cOgtgXmO3CeF1Nn50UyEd2kATBsnNoeEtHHMd843ppyvT6sm3rLb1Ipo6gApNCspNwdKYI2F0wqQMguPapwRjc24dLyXOIGIHaHaUGK8LrUKYHyGUyRFN4Xq2Ca9GCa3i0kFygA96s3pVzCJDouaVZF0w8iP4g_zebSXi0I74smO4zesPzecSXVI2P5D6A23cYWP1gZC1O6UQMgsPaOGOIGIHyGULdPzcOKaHzcv7Qgd1P7z8ecUE744tHp1B8oG7epK0qoh60Xb8nFqg95Ecz4gefWM6rAwlwg1o0000l84jwk0E1g2w50a0k00000000000')">Newsong</button><br> -->
 		<button onmousedown="synth.nextBar(), synth.snapToBar()">Forwards</button><br>
 		<button onmousedown="synth.prevBar(), synth.snapToBar()">Backwards</button><br>
 	</div>
-	<div class="content">
-			<h1>Song info</h1>
-			<button onmousedown="console.log('Loop Start: ' + synth.song.loopStart)">Loop start</button><br>
-			<button onmousedown="console.log('Loop Length: ' + synth.song.loopLength)">Loop length</button><br>
-			<button onmousedown="console.log('Bars per song: ' + synth.song.barCount)">Bars per song</button><br>
-			<button onmousedown="console.log('Song tempo: ' + synth.song.tempo)">Song tempo</button><br>
-			<button onmousedown="console.log('Song reverb: ' + synth.song.reverb)">Song reverb</button><br>
-			<button onmousedown="console.log('Song key: ' + synth.song.key)">Song key</button><br>
-			<div id="log"></div>
-			<h1>Technical</h1>
-			<button onmousedown="console.log('Song volume: ' + synth.volume)">BeepBox Volume</button><br>
-			<button onmousedown="console.log('Channel Scroll-positions: ' + synth.song.channelOctaves)">Channel Scroll-positions</button><br>
-			<button onmousedown="console.log('Instrument Waves: ' + synth.song.instrumentWaves)">Instrument Waves</button><br>
-			<button onmousedown="console.log('Instrument volumes: ' + synth.song.instrumentVolumes)">Channel instrument Volumes</button><br>
-			<button onmousedown="console.log('Instrument Filters: ' + synth.song.instrumentFilters)">Channel instrument Filters</button><br>
-			<button onmousedown="console.log('Instrument Envelopes: ' + synth.song.instrumentEnvelopes)">Channel instrument Envelopes</button><br>
-			<h1>Let me just try something crazy.</h1>
-			<button onmousedown="console.log('samplesPerSecond: ' + synth.samplesPerSecond)">samplesPerSecond</button><br>
-            <button onmousedown="console.log('effectDuration: ' + synth.effectDuration)">effectDuration</button><br>
-            <button onmousedown="console.log('effectAngle: ' + synth.effectAngle)">effectAngle</button><br>
-            <button onmousedown="console.log('effectYMult: ' + synth.effectYMult)">effectYMult</button><br>
-            <button onmousedown="console.log('limitDecay: ' + synth.limitDecay)">limitDecay</button><br>
-            <button onmousedown="console.log('song: ' + synth.song)">song</button><br>
-            <button onmousedown="console.log('pianoPressed: ' + synth.pianoPressed)">pianoPressed</button><br>
-            <button onmousedown="console.log('pianoPitch: ' + synth.pianoPitch)">pianoPitch</button><br>
-            <button onmousedown="console.log('pianoChannel: ' + synth.pianoChannel)">pianoChannel</button><br>
-            <button onmousedown="console.log('enableIntro: ' + synth.enableIntro)">enableIntro</button><br>
-            <button onmousedown="console.log('enableOutro: ' + synth.enableOutro)">enableOutro</button><br>
-            <button onmousedown="console.log('loopCount: ' + synth.loopCount)">loopCount</button><br>
-            <button onmousedown="console.log('volume: ' + synth.volume)">volume</button><br>
-            <button onmousedown="console.log('playheadInternal: ' + synth.playheadInternal)">playheadInternal</button><br>
-            <button onmousedown="console.log('bar: ' + synth.bar)">bar</button><br>
-            <button onmousedown="console.log('beat: ' + synth.beat)">beat</button><br>
-            <button onmousedown="console.log('part: ' + synth.part)">part</button><br>
-            <button onmousedown="console.log('arpeggio: ' + synth.arpeggio)">arpeggio</button><br>
-            <button onmousedown="console.log('arpeggioSampleCountdown: ' + synth.arpeggioSampleCountdown)">arpeggioSampleCountdown</button><br>
-            <button onmousedown="console.log('paused: ' + synth.paused)">paused</button><br>
-            <button onmousedown="console.log('tones: ' + synth.tones)">tones</button><br>
-            <button onmousedown="console.log('stillGoing: ' + synth.stillGoing)">stillGoing</button><br>
-            <button onmousedown="console.log('effectPhase: ' + synth.effectPhase)">effectPhase</button><br>
-            <button onmousedown="console.log('limit: ' + synth.limit)">limit</button><br>
-            <button onmousedown="console.log('samplesForReverb: ' + synth.samplesForReverb)">samplesForReverb</button><br>
-            <button onmousedown="console.log('reverbDelayLine: ' + synth.reverbDelayLine)">reverbDelayLine</button><br>
-            <button onmousedown="console.log('reverbDelayPos: ' + synth.reverbDelayPos)">reverbDelayPos</button><br>
-            <button onmousedown="console.log('reverbFeedback0: ' + synth.reverbFeedback0)">reverbFeedback0</button><br>
-            <button onmousedown="console.log('reverbFeedback1: ' + synth.reverbFeedback1)">reverbFeedback1</button><br>
-            <button onmousedown="console.log('reverbFeedback2: ' + synth.reverbFeedback2)">reverbFeedback2</button><br>
-            <button onmousedown="console.log('reverbFeedback3: ' + synth.reverbFeedback3)">reverbFeedback3</button><br>
-            <button onmousedown="console.log('audioCtx: ' + synth.audioCtx)">audioCtx</button><br>
-            <button onmousedown="console.log('scriptNode: ' + synth.scriptNode)">scriptNode</button><br>
-
-		</div>
-
 	<script type="text/javascript" src="beepbox_synth.js">
 	</script>
-
 	<script type="text/javascript">
-
-		// $.ajax({
-		// 	dataType: "json",
-		// 	url: 'https://raw.githubusercontent.com/Shadetrap/Misc/master/playlist.json',
-		// 	data: data,
-		// 	success: success
-		// });
+		var synth = new beepbox.Synth("5sbk4l00e0ftaa7g0fj7i0r1w1100f0000d1110c0000h0000v2200o3320b4z8Ql6hkpUsiczhkp5hDxN8Od5hAl6u74z8Ql6hkpUsp24ZFzzQ1E39kxIceEtoV8s66138l1S0L1u2139l1H39McyaeOgKA0TxAU213jj0NM4x8i0o0c86ywz7keUtVxQk1E3hi6OEcB8Atl0q0Qmm6eCexg6wd50oczkhO8VcsEeAc26gG3E1q2U406hG3i6jw94ksf8i5Uo0dZY26kHHzxp2gAgM0o4d516ej7uegceGwd0q84czm6yj8Xa0Q1EIIctcvq0Q1EE3ihE8W1OgV8s46Icxk7o24110w0OdgqMOk392OEWhS1ANQQ4toUctBpzRxx1M0WNSk1I3ANMEXwS3I79xSzJ7q6QtEXgw0");
 
 
-		// $.getJSON('https://raw.githubusercontent.com/Shadetrap/Misc/master/playlist.json', function (data) {
-
-		// 		var text = `One: ${data.one}<br>
-        //             Completed: ${data.completed}<br>
-        //             Three: ${data.three}`
-
-
-		// 		$(".mypanel").html(text);
-		// 	});
-			
-		// $.getJSON("http://time.jsontest.com", function (data) {
-		// 		var items = [];
-		// 		$.each(data, function (key, val) {
-		// 			items.push("<li id='" + key + "'>" + val + "</li>");
-		// 		});
-
-		// 		$("<ul/>", {
-		// 			"class": "my-new-list",
-		// 			html: items.join("")
-		// 		}).appendTo("body");
-		// 	});
 
 		$(document).ready(function () {
-				$.getJSON('playlist.json', {
-					format: "json"
-				}).done(function (data) {
-					alert(data.one);
+			$.getJSON('', function(data) {
+    //data is the JSON string
+});
+			$.getJSON("\'" + location.hash.substr(1) + "\'", function (data) {
+				// var txt = "eh";
+				// var txt = "nah";
+				// txt += "<table border='1'>"
+				// console.log(data.track[0].from);
+				// for (x in data.track) {
+				// 	txt += "<tr><td>" + data.main.version + "</td></tr>";
+				// }
+				// txt += "</table>"
+				// document.getElementById("body").innerHTML = txt;
+
+
+
+				// $.each(data.track[x], function () {
+				// 	var row = $('<tr>');
+				// 	$.each(x, function () {
+				// 		$('<td>').html(item).appendTo(row);
+				// 	});
+				// 	row.appendTo($('#tbl'));
+				// });
+
+				$.each(data.track, function (index, item) {
+					$("<tr>").append(
+						$("<td>").html("<button onmousedown=\"synth.snapToStart(); synth.setSong(\'" + item.songlink + "\'); synth.play(); playSound(this, \'"+item.title+"\');\">Play</button>"),
+						$("<td>").html(item.title),
+					).appendTo("#mytable tbody");
 				});
+
 			});
-
-		var synth = new beepbox.Synth("5sbk4l00e0ftaa7g0fj7i0r1w1100f0000d1110c0000h0000v2200o3320b4z8Ql6hkpUsiczhkp5hDxN8Od5hAl6u74z8Ql6hkpUsp24ZFzzQ1E39kxIceEtoV8s66138l1S0L1u2139l1H39McyaeOgKA0TxAU213jj0NM4x8i0o0c86ywz7keUtVxQk1E3hi6OEcB8Atl0q0Qmm6eCexg6wd50oczkhO8VcsEeAc26gG3E1q2U406hG3i6jw94ksf8i5Uo0dZY26kHHzxp2gAgM0o4d516ej7uegceGwd0q84czm6yj8Xa0Q1EIIctcvq0Q1EE3ihE8W1OgV8s46Icxk7o24110w0OdgqMOk392OEWhS1ANQQ4toUctBpzRxx1M0WNSk1I3ANMEXwS3I79xSzJ7q6QtEXgw0");
-		//var synth = new beepbox.Synth("6n32sbkbl01e0ztbm0a7g0Ajsi1r1o33200T0w2f1d1c2h0v0T0w1f1d0c0h0v0T0w3f1d1c0h0v0T0w1f1d1c0h0v0T0w4f4d1c0h0v0T0w1f1d1c0h0v0T2w1d1v1T2w1d1v0T2w1d1v1T2w1d1v0b2ZwxAagNb4yuxWLoaql9ARPo7gsal9AU8wL6gphOz0NPe28bR9mNilIcsPB9mM8xyqgF34agNPD28oCEixiSbksVMEixgh74h248gB4mco5FN4mJqTesVX61gx40000000000012400000000000gx00000p2uEleccz1j7wd0ragSAribmyb2C33TruNKlEuM5Ce6gpe0Aejy11pKiWyy362V2oojce05su47ktx883H4h8j6z8S8xSv60UYyGKhw5coo35o30ICCT70i4xy2oE0kMIj98YCCD9kU06tH3zkNNd381AkxieVAagcu9Mc7GoonYhhVhwe0Vm9oyfSIyzoIP09xx9CAocBd0A7Pnemxwc_1cz97GoU0ccw72okr4zPAxODDowfu07u100H0OMlTu80lBPtws0bKS05RBjodyqLoKGZyrHOMsnNunug3bKXUyGH1N5lBRBjodyqLoHpGBcvkgoMr8j32pxM0HzMww8X2gg7ma8849zrAqCy960Y8EyMVuTag5lczlye1RpelllkTGsogwegFxxhAi5n6O6vvy68ikz8JTc1PcwepA1pzYgVe0Aejy11pKiXA10Mc10TMc1NosSYaoxg76FzycMp0dokxl98cC7V85cs090e5cc2dygTQMEV-YdZV5Yqh1zdO4MMmos0aUY882eMA41Ry8Au4p6R8OgZj320kNN8EVyH0gFNSQwy1D14Dwwl0gaU8dx0Gsopc1R0q0Od8o8zbFywg43zWOgA5cop3g54024Mx4Oif9FFOle01IqMw02VzxRoWXItRSeAc8c3Mgp046g212R100E231j8lgojyblly0dRtSllozZVllytTBlm0Y39TullbFDbGayjQcG5wqoMZc66CCBR55aTLnjao7tTcB9pyQgg950Ac2gcN01Y07whU8uh7JS_V0wA22h894wAi1A22Tr_whY07M0u17wxV4uTr_A22g80IPli1u07o100H0OMlTu80lBPtws0bKS05RBjodyqLoKGZyrHOMsnNunug3bKXUyGH1N5lBRBjodyqLoHpGDOdtchj0GIHaGOI5Nj0GIHaGODaNnaGOIGHaPsjPaIHaGODdOYSHaOGI0M3cPGIHaGOD1sjPGIHaGOkgglc465c4CshkMht6-bHww0lwpoaXLfaIKrI7ztTVnmndwSGGZyWHS9KLb1Nv5VtV0cKXLyaGI74lmnmldwS9GZyJCGncrv4GGwRlgpiXFCMQxHC5sNY2M56xwFAaEc9N5GGN06WKXaGIh-YGGNeXwu1AXLaGwG5ON8ZCF9ES5Xh0kAhTcQ5d4fsOLBljCp0yOWpOXdl9m6KCsGxEZP-ZURleoF6286GGSGEy0002Ca2Cp52oQp5wWNJ0p8dwoaLkcFj9O_gZ0N7aHN8c2C8A5RyQjaOkPpR7tKE3BcA613CS5YBKwMM0r0VChoOoogdRwr0Ori71cK-jEOqcBAgVen1kQpB6iV6hAko3BRVu8oAdjhoQbyXd_Ke9EjeBUhSurLStyOzpv3WJ3X0N7aHPv07f600000ao00Aw0gQ92g783hIyOgQ9OVqkCiD9CVaaC92w226FyygFywWw5fc92hB0SuoVHpS7ywVdlek79GFsHGtzCKpVzGcE6PP7zTu6jUXSjPR0uuJFOwVfftNAYXSjPP7zTkue-4YNUNBsu1cl2hj1Wgi6-huv3U1YTnO01FQwx8Eaog6F2EsEZQ6z8shh030A92g4wUHywsghSJA6lAwkwi8tHp1N7cwUHywsgQxhdUf6sm3cOgtgXmO3CeF1Nn50UyEd2kATBsnNoeEtHHMd843ppyvT6sm3rLb1Ipo6gApNCspNwdKYI2F0wqQMguPapwRjc24dLyXOIGIHaHaUGK8LrUKYHyGUyRFN4Xq2Ca9GCa3i0kFygA96s3pVzCJDouaVZF0w8iP4g_zebSXi0I74smO4zesPzecSXVI2P5D6A23cYWP1gZC1O6UQMgsPaOGOIGIHyGULdPzcOKaHzcv7Qgd1P7z8ecUE744tHp1B8oG7epK0qoh60Xb8nFqg95Ecz4gefWM6rAwlwg1o0000l84jwk0E1g2w50a0k00000000000");
-		//synth.play();
-		//synth.pause()
-		//synth.snapToStart()
-		//synth.setSong(Your beepbox URL after the #)
-		//synth.nextBar()
-		//synth.prevBar()
-		//synth
-
-
-		//*Loop start!
-		console.log("loopStart: " + synth.song.loopStart);
-        //!*Loop length!
-		console.log("loopLength: " + synth.song.loopLength);
-		//!*Overall Bar-count!
-		console.log("barCount: " + synth.song.barCount);
-
-
-			synth.song.channelOctaves;
-            //!*Oh, this one is useful:
-            console.log("instrumentVolumes: " + synth.song.instrumentVolumes);
-            console.log("instrumentWaves: " + synth.song.instrumentWaves);
-            console.log("instrumentFilters: " + synth.song.instrumentFilters);
-            console.log("instrumentEnvelopes: " + synth.song.instrumentEnvelopes);
-            console.log("instrumentEffects: " + synth.song.instrumentEffects);
-            console.log("instrumentChorus: " + synth.song.instrumentChorus);
-            //!*Useless unless you are in the beepbox editor.
-            console.log("scale: " + synth.song.scale);
-            console.log("beatsPerbar: " + synth.song.beatsPerbar);
-
-            //setSong, play, pause, snapToStart, snapToBar, nextBar, prevBar, synthesize, frequencyFromPitch, volumeConversion, getSamplesPerArpeggio
-
-
-            //!*As it says, it's how many samples per second there is.
-            console.log("samplesPerSecond: "+ synth.samplesPerSecond);
-            //!* Works a bit like a tapestop effect. DON'T SET IT TOO HIGH.
-            synth.samplesPerSecond += 100000;
-            //!*Enable or disable intro or outro. Behaves as true or false.
-            console.log("enableIntro: "+ synth.enableIntro);
-            console.log("enableOutro: "+ synth.enableOutro);
-            // //!*Does not work this way.
-            console.log("song: "+ synth.song);
-            //!*Displays the current volume setting.
-            console.log("volume: "+ synth.volume);
-            //!*Don't know. the ammount of billiparts notes are made of entirely?
-            console.log("arpeggioSampleCountdown: "+ synth.arpeggioSampleCountdown);
-            //!*Don't know, It's always on 0.
-            console.log("drumPlayhead: "+ synth.drumPlayhead);
-            //!*Don't know. IT's always on 0.
-            console.log("drumSample: "+ synth.drumSample);
-            //*Don't know. volume intensity parameter to know when to limit the volume??
-			console.log("limit: "+ synth.limit);
-			///////////////////////////////////////OAOAOAOAOAOAOAOAOAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-			//!*Displays precisely where in the song we currently are.
-            console.log("playheadInternal: "+ synth.playheadInternal);
-            //!*Displays current playing bar.
-            console.log("bar: "+ synth.bar);
-            //!*Standard is from 0 to 8. Depending on how many bars you've set the song to be in.
-            //!*Displays the current beat position in a bar.
-            console.log("beat: "+ synth.beat);
-            //!*Usually 4 parts in a beat, unless cranked up to 8.
-            console.log("part: "+ synth.part);
-            //*Displays the current tiny arpeggio position, like when more than two notes are played
-            console.log("arpeggio: "+ synth.arpeggio);
-            //!*Obvious
-			console.log("paused: "+ synth.paused);
-			// function listen1() {
-			// 	console.log("it has started!")
-			// 		var listen1 = setInterval(function () {
-			// 			console.log("it has started!")
-			// 			var songEnd = synth.song.loopStart + synth.song.loopLength;
-			// 			if (synth.bar == songEnd) {
-			// 				console.log("Oi M8!");
-			// 				clearInterval(listen1);
-			// 			}
-			// 		}, 15);
-			// 	}
-			// 	listen1();
-			$(".translater").attr("looptrigger","0");
-				setInterval(function () {
-						if ($('.translater').attr('loopTrigger') == "0" && synth.bar == synth.song.loopStart + 1) {
-							$(".translater").attr("looptrigger","1");
-							alert("firstTime is 1 now!")
-						}
-						else if ($('.translater').attr('loopTrigger') == "1") {
-							if (synth.bar == synth.song.loopStart) {
-								alert("It finally looped once, horray!")
-								$(".translater").attr("looptrigger","1");
-								clearTimeout()
-							}
-						}
-					}, 15);
+		});
+		function playSound(button, name) {
+			$(button, name.target).closest( "tr" ).addClass('poop').siblings().removeClass('poop');
+			console.log("hoivs");
+		}
 
 
 
+
+
+		
+		//<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240438865&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+		//https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/240438865
+
+
+
+
+
+		$(".jsHelper").attr("looptrigger", "0");
+		setInterval(function () {
+			if ($('.jsHelper').attr('loopTrigger') == "0" && synth.bar == synth.song.loopStart + 1) {
+				$(".jsHelper").attr("looptrigger", "1");
+				console.log("first time is 1 now!")
+			}
+			else if ($('.jsHelper').attr('loopTrigger') == "1") {
+				if (synth.bar == synth.song.loopStart) {
+					console.log("It finally looped once, horray!")
+					$(".poop").removeAttr('id').closest('tr').next().find('button').mousedown().attr('id','pewp').focus().addClass(".poop").siblings().removeClass(".poop");
+					$(".jsHelper").attr("looptrigger", "0");
+				}
+			}
+		}, 15);
 	</script>
+
+
+
+
+
+
+
+
+
+
+
+
 	<script type="text/javascript">
-	(function () {
+		(function () {
 			if (!console) { console = {}; }
 			var old = console.log;
 			var logger = document.getElementById('log');
 			console.log = function (message) {
 				if (typeof message == 'object') {
 					document.getElementById('log').innerHTML = "";
-					logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />'; }
+					logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
+				}
 				else {
 					document.getElementById('log').innerHTML = "";
-					logger.innerHTML += message + '<br />'; }
+					logger.innerHTML += message + '<br />';
+				}
 			}
 		})();
-	console.log('tezt')
+		console.log('tezt')
 	</script>
 </body>
 
